@@ -45,4 +45,20 @@
 .removeButton:hover{
   background-color: white;
 }
-
+.feeWrapper{
+  display:flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 20px;
+}
+.feeBox{
+  color:white;
+  padding:10px;
+  flex:1;
+}
+#recommendedBaseFee{
+  background: #00A1E4
+}
+#currentBaseFee{
+  background: #DC0073;
+}
