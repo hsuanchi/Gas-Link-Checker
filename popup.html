@@ -3,19 +3,78 @@
 
 <head>
   <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="font.css">
+  <link rel="stylesheet" href="scrollbar.css">
 </head>
 
 <body>
   <div id="app">
     <div id="scrollDiv">
-      <h1>GAS & Link Checker</h1>
+      <h1 id="app-name">Gas & Link Checker</h1>
       <div class="feeWrapper">
-        <p class="feeBox" id="recommendedBaseFee"></p>
-        <p class="feeBox" id="currentBaseFee"></p>
+        <div class="feeBox">
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <defs>
+                  <filter id="gooey">
+                      <!-- in="sourceGraphic" -->
+                      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+                      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="highContrastGraphic" />
+                      <feComposite in="SourceGraphic" in2="highContrastGraphic" operator="atop" />
+                  </filter>
+              </defs>
+          </svg>
+
+          <button class="gooey-button" id="currentGas">
+            <div class="buttonText">Current Gas</div>
+            <div class="buttonFee"></div>
+              <span class="bubbles">
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+              </span>
+          </button>
+        </div>
+        <div class="feeBox">
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <defs>
+                  <filter id="gooey">
+                      <!-- in="sourceGraphic" -->
+                      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+                      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="highContrastGraphic" />
+                      <feComposite in="SourceGraphic" in2="highContrastGraphic" operator="atop" />
+                  </filter>
+              </defs>
+          </svg>
+
+          <button class="gooey-button" id="recommendedGas">
+              <div class="buttonText">Recommended</div>
+              <div class="buttonFee"></div>
+              <span class="bubbles">
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+                  <span class="bubble"></span>
+              </span>
+          </button>
+        </div>
       </div>
+
       <br>
-      <div id="addLinkWrapper"><button id="addLink">Add current webpage to official links</button></div>
       <div id="official-links"></div>
+      <div id="addLinkWrapper"><button id="addLink">Add current webpage to official links</button></div>
       <script src="addlinks.js"></script>
       <script src="addgasfee.js"></script>
     </div>

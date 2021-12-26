@@ -1,6 +1,34 @@
+body{
+  margin:0;
+}
 #app{
+  font-family: 'Cyberverse', 'Roboto', 'Gianpiero1', 'Gianpiero4', sans-serif;	
   min-width:380px;
+  min-height: 100%;
   padding:20px;
+  color:white;
+  background: #250C28;
+}
+#app button{
+  font-family: 'Cyberverse', 'Roboto', 'Gianpiero1', 'Gianpiero4', sans-serif;	
+}
+/*
+#app:before{
+	content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./images/bitcoin.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+*/
+#app-name{
+  font-weight:400;
 }
 
 #scrollDiv{
@@ -18,16 +46,28 @@
 #addLink{
   width: 100%;
   height:60px;
-  font-size:28px
-  border-radius: 16px;
-  background-color: #008CBA;
-  border: 2px solid #008CBA;
+  border-radius: 8px;
+  background-color: #342637;
+  border: 2px solid #342637;
   color: white;
   cursor:pointer;
 }
 #addLink:hover{
   background:white;
   color:black;
+}
+#official-links{
+  background: #342637;
+  max-height:235px;
+  border-radius:8px;
+  color:white;
+  margin-bottom:10px;
+  padding:20px;
+  overflow-y:scroll;
+}
+.links a{
+  color: white;
+  font-weight:200;
 }
 .links{
   display: flex;
@@ -49,16 +89,194 @@
   display:flex;
   justify-content: center;
   gap: 10px;
-  font-size: 20px;
 }
 .feeBox{
-  color:white;
-  padding:10px;
   flex:1;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-#recommendedBaseFee{
-  background: #00A1E4
+.baseText{
+  font-size:16px;
 }
-#currentBaseFee{
-  background: #DC0073;
+.numText{
+  font-size:20px;
 }
+svg {
+  position: absolute;
+  top: -4000px;
+  left: -4000px; 
+}
+
+.gooey-button {
+  width:100%;
+  height:100%;
+  border: none;
+  color:white;
+  filter: url("#gooey");
+  position: relative;
+}
+#recommendedGas, #recommendedGas .bubbles .bubble{
+  background-color: #F7063E;
+}
+#currentGas, #currentGas .bubbles .bubble{
+  background-color: #FA3865;
+}
+.buttonText{
+  padding:5px;
+  font-size:16px;
+}
+.buttonFee{
+  padding:5px;
+  font-size:20px;
+}
+.gooey-button:focus {
+  outline: none; 
+}
+.gooey-button .bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; 
+}
+.gooey-button .bubbles .bubble {
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: -1; 
+}
+.gooey-button .bubbles .bubble:nth-child(1) {
+  left: 37px;
+  width: 25px;
+  height: 25px;
+  animation: move-1 3.02s infinite;
+  animation-delay: 0.2s; 
+}
+.gooey-button .bubbles .bubble:nth-child(2) {
+  left: 77px;
+  width: 25px;
+  height: 25px;
+  animation: move-2 3.04s infinite;
+  animation-delay: 0.4s; 
+}
+.gooey-button .bubbles .bubble:nth-child(3) {
+  left: 60px;
+  width: 25px;
+  height: 25px;
+  animation: move-3 3.06s infinite;
+  animation-delay: 0.6s; 
+}
+.gooey-button .bubbles .bubble:nth-child(4) {
+  left: 22px;
+  width: 25px;
+  height: 25px;
+  animation: move-4 3.08s infinite;
+  animation-delay: 0.8s; 
+}
+.gooey-button .bubbles .bubble:nth-child(5) {
+  left: 79px;
+  width: 25px;
+  height: 25px;
+  animation: move-5 3.1s infinite;
+  animation-delay: 1s; 
+}
+.gooey-button .bubbles .bubble:nth-child(6) {
+  left: 22px;
+  width: 25px;
+  height: 25px;
+  animation: move-6 3.12s infinite;
+  animation-delay: 1.2s; 
+}
+.gooey-button .bubbles .bubble:nth-child(7) {
+  left: 23px;
+  width: 25px;
+  height: 25px;
+  animation: move-7 3.14s infinite;
+  animation-delay: 1.4s; 
+}
+.gooey-button .bubbles .bubble:nth-child(8) {
+  left: 22px;
+  width: 25px;
+  height: 25px;
+  animation: move-8 3.16s infinite;
+  animation-delay: 1.6s; 
+}
+.gooey-button .bubbles .bubble:nth-child(9) {
+  left: 67px;
+  width: 25px;
+  height: 25px;
+  animation: move-9 3.18s infinite;
+  animation-delay: 1.8s; 
+}
+.gooey-button .bubbles .bubble:nth-child(10) {
+  left: 89px;
+  width: 25px;
+  height: 25px;
+  animation: move-10 3.2s infinite;
+  animation-delay: 2s; 
+}
+
+@keyframes move-1 {
+  0% { transform: translate(0, 0); }
+  99% { transform: translate(0, -58px); }
+  100% { transform: translate(0, 0); opacity: 0; } 
+}
+
+@keyframes move-2 {
+  0% { transform: translate(0, 0); }
+  99% { transform: translate(0, -105px); }
+  100% { transform: translate(0, 0); opacity: 0; } 
+}
+
+@keyframes move-3 {
+  0% { transform: translate(0, 0); }
+  99% { transform: translate(0, -113px); }
+  100% { transform: translate(0, 0); opacity: 0; } 
+}
+
+@keyframes move-4 {
+  0% { transform: translate(0, 0); }
+  99% { transform: translate(0, -54px); }
+  100% { transform: translate(0, 0); opacity: 0; } 
+}
+
+@keyframes move-5 {
+  0% { transform: translate(0, 0); }
+  99% { transform: translate(0, -74px); }
+  100% { transform: translate(0, 0); opacity: 0; } 
+}
+
+@keyframes move-6 {
+  0% { transform: translate(0, 0); }
+  99% { transform: translate(0, -53px); }
+  100% { transform: translate(0, 0); opacity: 0; } 
+}
+
+@keyframes move-7 {
+  0% { transform: translate(0, 0); }
+  99% { transform: translate(0, -95px); }
+  100% { transform: translate(0, 0); opacity: 0; } 
+}
+
+@keyframes move-8 {
+  0% { transform: translate(0, 0); }
+  99% { transform: translate(0, -91px); }
+  100% { transform: translate(0, 0); opacity: 0; } 
+}
+
+@keyframes move-9 {
+  0% { transform: translate(0, 0); }
+  99% { transform: translate(0, -72px); }
+  100% { transform: translate(0, 0); opacity: 0; } 
+}
+
+@keyframes move-10 {
+  0% { transform: translate(0, 0); }
+  99% { transform: translate(0, -110px); }
+  100% { transform: translate(0, 0); opacity: 0; } 
+}
+

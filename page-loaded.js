@@ -22,8 +22,6 @@ chrome.storage.sync.get("officialLinks", ({ officialLinks }) => {
   if (officialLinks.includes(currentURL)) return;
 	officialLinks.forEach(link => {
     similarityOfLink = similarity(removeSubdomain(link), currentURL);
-    console.log(removeSubdomain(link), currentURL);
-    console.log(similarityOfLink);
     if(0.7 < similarityOfLink && similarityOfLink < 1) {
       alert(`might be FAKE!!!
         Current URL is ${currentURL}, Do you mean ${link}?`);
