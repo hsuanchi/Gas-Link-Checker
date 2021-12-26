@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="app.css">
   <link rel="stylesheet" href="font.css">
   <link rel="stylesheet" href="scrollbar.css">
+  <link rel="stylesheet" href="border.css">
 </head>
 
 <body>
@@ -13,61 +14,15 @@
       <h1 id="app-name">Gas & Link Checker</h1>
       <div class="feeWrapper">
         <div class="feeBox">
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-              <defs>
-                  <filter id="gooey">
-                      <!-- in="sourceGraphic" -->
-                      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
-                      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="highContrastGraphic" />
-                      <feComposite in="SourceGraphic" in2="highContrastGraphic" operator="atop" />
-                  </filter>
-              </defs>
-          </svg>
-
           <button class="gooey-button" id="currentGas">
             <div class="buttonText">Current Gas</div>
             <div class="buttonFee"></div>
-              <span class="bubbles">
-                  <span class="bubble"></span>
-                  <span class="bubble"></span>
-                  <span class="bubble"></span>
-                  <span class="bubble"></span>
-                  <span class="bubble"></span>
-                  <span class="bubble"></span>
-                  <span class="bubble"></span>
-                  <span class="bubble"></span>
-                  <span class="bubble"></span>
-                  <span class="bubble"></span>
-              </span>
           </button>
         </div>
         <div class="feeBox">
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-              <defs>
-                  <filter id="gooey">
-                      <!-- in="sourceGraphic" -->
-                      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
-                      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="highContrastGraphic" />
-                      <feComposite in="SourceGraphic" in2="highContrastGraphic" operator="atop" />
-                  </filter>
-              </defs>
-          </svg>
-
           <button class="gooey-button" id="recommendedGas">
               <div class="buttonText">Recommended</div>
               <div class="buttonFee"></div>
-              <span class="bubbles">
-                  <span class="bubble"></span>
-                  <span class="bubble"></span>
-                  <span class="bubble"></span>
-                  <span class="bubble"></span>
-                  <span class="bubble"></span>
-                  <span class="bubble"></span>
-                  <span class="bubble"></span>
-                  <span class="bubble"></span>
-                  <span class="bubble"></span>
-                  <span class="bubble"></span>
-              </span>
           </button>
         </div>
       </div>

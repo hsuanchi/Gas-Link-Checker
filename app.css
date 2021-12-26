@@ -7,7 +7,7 @@ body{
   min-height: 100%;
   padding:20px;
   color:white;
-  background: #250C28;
+  background: #0B1217;
 }
 #app button{
   font-family: 'Cyberverse', 'Roboto', 'Gianpiero1', 'Gianpiero4', sans-serif;	
@@ -47,8 +47,8 @@ body{
   width: 100%;
   height:60px;
   border-radius: 8px;
-  background-color: #342637;
-  border: 2px solid #342637;
+  background-color: #142028;
+  border: 2px solid #142028;
   color: white;
   cursor:pointer;
 }
@@ -57,7 +57,8 @@ body{
   color:black;
 }
 #official-links{
-  background: #342637;
+  letter-spacing:0.5px;
+  background: #142028;
   max-height:235px;
   border-radius:8px;
   color:white;
@@ -113,15 +114,16 @@ svg {
   width:100%;
   height:100%;
   border: none;
+  border-radius:8px;
   color:white;
   filter: url("#gooey");
   position: relative;
 }
-#recommendedGas, #recommendedGas .bubbles .bubble{
-  background-color: #F7063E;
+#recommendedGas{
+  background-color: #142028;
 }
-#currentGas, #currentGas .bubbles .bubble{
-  background-color: #FA3865;
+#currentGas{
+  background-color: #142028;
 }
 .buttonText{
   padding:5px;
@@ -129,154 +131,9 @@ svg {
 }
 .buttonFee{
   padding:5px;
-  font-size:20px;
+  font-size:26px;
 }
 .gooey-button:focus {
   outline: none; 
-}
-.gooey-button .bubbles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0; 
-}
-.gooey-button .bubbles .bubble {
-  border-radius: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  z-index: -1; 
-}
-.gooey-button .bubbles .bubble:nth-child(1) {
-  left: 37px;
-  width: 25px;
-  height: 25px;
-  animation: move-1 3.02s infinite;
-  animation-delay: 0.2s; 
-}
-.gooey-button .bubbles .bubble:nth-child(2) {
-  left: 77px;
-  width: 25px;
-  height: 25px;
-  animation: move-2 3.04s infinite;
-  animation-delay: 0.4s; 
-}
-.gooey-button .bubbles .bubble:nth-child(3) {
-  left: 60px;
-  width: 25px;
-  height: 25px;
-  animation: move-3 3.06s infinite;
-  animation-delay: 0.6s; 
-}
-.gooey-button .bubbles .bubble:nth-child(4) {
-  left: 22px;
-  width: 25px;
-  height: 25px;
-  animation: move-4 3.08s infinite;
-  animation-delay: 0.8s; 
-}
-.gooey-button .bubbles .bubble:nth-child(5) {
-  left: 79px;
-  width: 25px;
-  height: 25px;
-  animation: move-5 3.1s infinite;
-  animation-delay: 1s; 
-}
-.gooey-button .bubbles .bubble:nth-child(6) {
-  left: 22px;
-  width: 25px;
-  height: 25px;
-  animation: move-6 3.12s infinite;
-  animation-delay: 1.2s; 
-}
-.gooey-button .bubbles .bubble:nth-child(7) {
-  left: 23px;
-  width: 25px;
-  height: 25px;
-  animation: move-7 3.14s infinite;
-  animation-delay: 1.4s; 
-}
-.gooey-button .bubbles .bubble:nth-child(8) {
-  left: 22px;
-  width: 25px;
-  height: 25px;
-  animation: move-8 3.16s infinite;
-  animation-delay: 1.6s; 
-}
-.gooey-button .bubbles .bubble:nth-child(9) {
-  left: 67px;
-  width: 25px;
-  height: 25px;
-  animation: move-9 3.18s infinite;
-  animation-delay: 1.8s; 
-}
-.gooey-button .bubbles .bubble:nth-child(10) {
-  left: 89px;
-  width: 25px;
-  height: 25px;
-  animation: move-10 3.2s infinite;
-  animation-delay: 2s; 
-}
-
-@keyframes move-1 {
-  0% { transform: translate(0, 0); }
-  99% { transform: translate(0, -58px); }
-  100% { transform: translate(0, 0); opacity: 0; } 
-}
-
-@keyframes move-2 {
-  0% { transform: translate(0, 0); }
-  99% { transform: translate(0, -105px); }
-  100% { transform: translate(0, 0); opacity: 0; } 
-}
-
-@keyframes move-3 {
-  0% { transform: translate(0, 0); }
-  99% { transform: translate(0, -113px); }
-  100% { transform: translate(0, 0); opacity: 0; } 
-}
-
-@keyframes move-4 {
-  0% { transform: translate(0, 0); }
-  99% { transform: translate(0, -54px); }
-  100% { transform: translate(0, 0); opacity: 0; } 
-}
-
-@keyframes move-5 {
-  0% { transform: translate(0, 0); }
-  99% { transform: translate(0, -74px); }
-  100% { transform: translate(0, 0); opacity: 0; } 
-}
-
-@keyframes move-6 {
-  0% { transform: translate(0, 0); }
-  99% { transform: translate(0, -53px); }
-  100% { transform: translate(0, 0); opacity: 0; } 
-}
-
-@keyframes move-7 {
-  0% { transform: translate(0, 0); }
-  99% { transform: translate(0, -95px); }
-  100% { transform: translate(0, 0); opacity: 0; } 
-}
-
-@keyframes move-8 {
-  0% { transform: translate(0, 0); }
-  99% { transform: translate(0, -91px); }
-  100% { transform: translate(0, 0); opacity: 0; } 
-}
-
-@keyframes move-9 {
-  0% { transform: translate(0, 0); }
-  99% { transform: translate(0, -72px); }
-  100% { transform: translate(0, 0); opacity: 0; } 
-}
-
-@keyframes move-10 {
-  0% { transform: translate(0, 0); }
-  99% { transform: translate(0, -110px); }
-  100% { transform: translate(0, 0); opacity: 0; } 
 }
 
